@@ -5,6 +5,8 @@ This is a tool designed to privide the user a way to visualize realtime messages
 
 In a real world scenario, this application helps a user to check the health of applicances in different factories/locations in a lightweight and safe manner. While the frontend shown here is a simple visualizer, it showcases one in many possibilities of this architecture and could/should be improved when applied in a corporation.
 
+[Gravação de tela de 2026-07-17 10-16-14.webm](https://github.com/user-attachments/assets/1475fc69-39df-434e-a127-75e4439f95cd)
+
 This fullstack architecture can also be used as an integration tool between different protocols. The backend could, in turn, obtain messages from MQTT or modbus, and route them to different clients through the web.
 
 ## 1. Features
