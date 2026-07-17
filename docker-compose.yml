@@ -1,0 +1,30 @@
+services:
+  nats:
+    image: nats:latest
+    ports:
+      - "4222:4222"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./backend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - nats
+    links:
+      - nats
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "8080:8080"
